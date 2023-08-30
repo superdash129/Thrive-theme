@@ -1,0 +1,1 @@
+Cufon.replace('h4', { fontFamily: 'FS Me' } );Cufon.replace('.thrive_title', { fontFamily: 'FS Me' } );Cufon.replace('.thrive_subtitle', { fontFamily: 'FS Me Light' });

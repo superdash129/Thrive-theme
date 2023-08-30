@@ -1,0 +1,615 @@
+/*
+Theme Name: Thrive
+Theme URI: http://leadiv.com/thrive
+Description: A theme for thrivethinking.com 
+Author: Paul Borrego ( development ) / Thad Goad ( design )
+Version: 1.4.70
+*/
+
+/* @start CSS RESET */
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.8.2r1
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+/* @end CSS RESET */
+
+/* 960 GRID SYSTEM */
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+	
+	Col:85px
+	Col#:8
+	Gutter:40px
+*/
+
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_8 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 8 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_8 .grid_1 {
+	width:85px;
+}
+
+.container_8 .grid_2 {
+	width:210px;
+}
+
+.container_8 .grid_3 {
+	width:335px;
+}
+
+.container_8 .grid_4 {
+	width:460px;
+}
+
+.container_8 .grid_5 {
+	width:585px;
+}
+
+.container_8 .grid_6 {
+	width:710px;
+}
+
+.container_8 .grid_7 {
+	width:835px;
+}
+
+.container_8 .grid_8 {
+	width:960px;
+}
+
+
+
+/* Prefix Extra Space >> 8 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_8 .prefix_1 {
+	padding-left:125px;
+}
+
+.container_8 .prefix_2 {
+	padding-left:250px;
+}
+
+.container_8 .prefix_3 {
+	padding-left:375px;
+}
+
+.container_8 .prefix_4 {
+	padding-left:500px;
+}
+
+.container_8 .prefix_5 {
+	padding-left:625px;
+}
+
+.container_8 .prefix_6 {
+	padding-left:750px;
+}
+
+.container_8 .prefix_7 {
+	padding-left:875px;
+}
+
+
+
+/* Suffix Extra Space >> 8 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_8 .suffix_1 {
+	padding-right:125px;
+}
+
+.container_8 .suffix_2 {
+	padding-right:250px;
+}
+
+.container_8 .suffix_3 {
+	padding-right:375px;
+}
+
+.container_8 .suffix_4 {
+	padding-right:500px;
+}
+
+.container_8 .suffix_5 {
+	padding-right:625px;
+}
+
+.container_8 .suffix_6 {
+	padding-right:750px;
+}
+
+.container_8 .suffix_7 {
+	padding-right:875px;
+}
+
+
+
+/* Push Space >> 8 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_8 .push_1 {
+	left:125px;
+}
+
+.container_8 .push_2 {
+	left:250px;
+}
+
+.container_8 .push_3 {
+	left:375px;
+}
+
+.container_8 .push_4 {
+	left:500px;
+}
+
+.container_8 .push_5 {
+	left:625px;
+}
+
+.container_8 .push_6 {
+	left:750px;
+}
+
+.container_8 .push_7 {
+	left:875px;
+}
+
+
+
+/* Pull Space >> 8 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_8 .pull_1 {
+	left:-125px;
+}
+
+.container_8 .pull_2 {
+	left:-250px;
+}
+
+.container_8 .pull_3 {
+	left:-375px;
+}
+
+.container_8 .pull_4 {
+	left:-500px;
+}
+
+.container_8 .pull_5 {
+	left:-625px;
+}
+
+.container_8 .pull_6 {
+	left:-750px;
+}
+
+.container_8 .pull_7 {
+	left:-875px;
+}
+
+
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+/* @start 3 COLUMN GRID*/
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+.container_3{margin-left:auto;margin-right:auto;width:1002px;}
+.container_3 .grid_1,.container_3 .grid_2,.container_3 .grid_3{display:inline;float:left;position:relative;margin-left:21px;margin-right:21px}
+.container_3 .alpha{margin-left:0}
+.container_3 .omega{margin-right:0}
+.container_3 .grid_1{width:292px}
+.container_3 .grid_2{width:626px}
+.container_3 .grid_3{width:960px}
+.container_3 .prefix_1{padding-left:334px}
+.container_3 .prefix_2{padding-left:668px}
+.container_3 .suffix_1{padding-right:334px}
+.container_3 .suffix_2{padding-right:668px}
+.container_3 .push_1{left:334px}
+.container_3 .push_2{left:668px}
+.container_3 .pull_1{left:-334px}
+.container_3 .pull_2{left:-668px}
+/* @end 3 COLUMN GRID*/
+/* @end 960 GRID SYSTEM */
+
+/* NAV */
+.menu{
+	border:none;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	}
+.menu ul{
+	background:#333333;
+	height:35px;
+	list-style:none;
+	margin:0;
+	padding:0;
+	}
+	.menu li{
+		float:left;
+		padding:0px;
+		}
+	.menu li a{
+		background:#333333 url("images/seperator.gif") bottom right no-repeat;
+		color:#cccccc;
+		display:block;
+		font-weight:normal;
+		line-height:35px;
+		margin:0px;
+		padding:0px 19px;
+		text-align:center;
+		text-decoration:none;
+		}
+		.menu li a:hover, .menu ul li:hover a{
+			background: #2580a2 url("images/hover.gif") bottom center no-repeat;
+			color:#FFFFFF;
+			text-decoration:none;
+			}
+	.menu li ul{
+		background:#333333;
+		display:none;
+		height:auto;
+		padding:0px;
+		margin:0px;
+		border:0px;
+		position:absolute;
+		width:225px;
+		z-index:200;
+		/*top:1em;
+		/*left:0;*/
+		}
+	.menu li:hover ul{
+		display:block;
+		
+		}
+	.menu li li {
+		background:url('images/sub_sep.gif') bottom left no-repeat;
+		display:block;
+		float:none;
+		margin:0px;
+		padding:0px;
+		width:225px;
+		}
+	.menu li:hover li a{
+		background:none;
+		
+		}
+	.menu li ul a{
+		display:block;
+		height:35px;
+		font-size:12px;
+		font-style:normal;
+		margin:0px;
+		padding:0px 10px 0px 15px;
+		text-align:left;
+		}
+		.menu li ul a:hover, .menu li ul li:hover a{
+			background:#2580a2 url('images/hover_sub.gif') center left no-repeat;
+			border:0px;
+			color:#ffffff;
+			text-decoration:none;
+			}
+	.menu p{
+		clear:left;
+		}	
+
+/* @end NAV */
+
+/* @start PADDING */
+.thrive_tpad2 { padding-top:2px; }
+.thrive_tpad5 { padding-top:5px; }
+.thrive_tpad7 { padding-top:7px; }
+.thrive_tpad8 { padding-top:8px; }
+.thrive_tpad9 { padding-top:9px; }
+.thrive_tpad10 { padding-top:10px; }
+.thrive_tpad11 { padding-top:11px; }
+.thrive_tpad13 { padding-top:13px; }
+.thrive_tpad14 { padding-top:14px; }
+.thrive_tpad15 { padding-top:15px; }
+.thrive_tpad16 { padding-top:16px; }
+.thrive_tpad17 { padding-top:17px; }
+.thrive_tpad18 { padding-top:18px; }
+.thrive_tpad20 { padding-top:20px; }
+.thrive_tpad21 { padding-top:21px; }
+.thrive_tpad22 { padding-top:22px; }
+.thrive_tpad25 { padding-top:25px; }
+.thrive_tpad27 { padding-top:27px; }
+.thrive_tpad28 { padding-top:28px; }
+.thrive_tpad29 { padding-top:29px; }
+.thrive_tpad30 { padding-top:30px; }
+.thrive_tpad33 { padding-top:33px; }
+.thrive_tpad35 { padding-top:35px; }
+.thrive_tpad40 { padding-top:40px; }
+.thrive_tpad41 { padding-top:41px; }
+.thrive_tpad52 { padding-top:52px; }
+.thrive_tpad53 { padding-top:53px; }
+.thrive_tpad56 { padding-top:56px; }
+.thrive_tpad62 { padding-top:62px; }
+.thrive_tpad73 { padding-top:73px; }
+/* @end PADDING */
+
+/* ACCESSIBILITY */
+.skip-link { width:0; height:0; margin-left:-999px; }
+.screen-reader-text { font-size:1px; }
+/* @end ACCESSIBILITY */
+
+/* BASE STYLES */
+a { text-decoration:none; }
+a, a:hover, a:visited, .thrive_footer_text a:hover  { color:#009ddf; }
+h4 { font-size:1.1em; color:#333; text-transform:uppercase; }
+h2 { text-transform:uppercase; }
+.thrive_clear { clear:both; height:0; overflow:hidden; }
+.thrive_util_left { float:left; }
+.cufon-active h4 { padding-top:34px; margin-bottom:-7px; }
+.cufon-active .page-template-templateiii-php h4 { padding-top:27px; }
+.entry-content li, .entry-content p { line-height:1.715em; font-size:0.875em; color:#777; font-family:"trebuchet ms", arial, helvetica, sans-serif; }
+.thrive_column_block, .entry-content li, .entry-content p { padding-top:22px; }
+.entry-content strong { color:#333; font-weight:bold; }
+.entry-content ol li:first-letter { font-size:2.1em; padding-right:12px; padding-top:7px; float:left; }
+.bg_border_top { background:url(images/bg_top_border.png) repeat-x 0 0; }
+.thrive_footer_border { background:url(images/footer_border.png) repeat-x 0 0; height:5px; width:100%; }
+.thrive_footer_logo { background:url(images/footer_logo.png) no-repeat 0 0; height:47px; }
+.thrive_footer_text, .thrive_footer_text a { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-size:.7em; color:#9e9e9e; line-height:1.79em; }
+.thrive_footer_text a { font-size:inherit; }
+*:first-child+html .thrive_footer_text a { font-size:1em; } /* Yes an IE7 hack :( */
+.thrive_title_text { font-size:2.1em; color:#333; }
+.thrive_separator { border-top:1px solid #ccc; }
+.thrive_subtitle { font-size:1.8em; line-height: 1.4em; color:#9f9f9f; border-bottom:1px solid #ccc; padding-bottom:29px; }
+.thrive_swapbx, .thrive_empty_swapbx { display:block; position:relative; height:119px; width:210px; cursor:pointer; }
+.thrive_empty_swapbx { cursor:default; }
+.thrive_swapbx_hover { position:absolute; left:0; top:0; overflow:hidden; height:119px; width:210px; }
+.thrive_swapbx:hover .thrive_swapbx_hover { display:none; }
+.thrive_footer_title_text { font-weight:bold; }
+.no_link { cursor:default; }
+/* @end BASE STYLES */
+
+/* @start THRIVE CASE STUDY */
+.thrive_cs_md_break { width:15px; height:2px; background-color:#fff; }
+.thrive_cs_sm_break { width:10px; height:1px; background-color:#fff; }
+.thrive_cs_service_design { background:#fed501 url( images/yellow_arrow.png ) no-repeat 168px 140px; }
+.thrive_cs_service_insight { background:#ff7200 url( images/orange_arrow.png ) no-repeat 168px 140px; }
+.thrive_cs_service_strategy { background:#86ce1f url( images/green_arrow.png ) no-repeat 168px 140px; }
+.thrive_cs_quote { height:162px; width:176px; padding-left:19px; padding-right:15px; }
+.thrive_cs_blurb { height:91px; }
+.thrive_cs_quote p { padding:0; color:#fff; }
+.thrive_cs_quote a { color:#fff; }
+.thrive_swapbx_hover { color:#000; }
+.thrive_cs_product_text { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:bold; font-size:0.875em; line-height:1.286em; color:#333; }
+.thrive_cs_company_text { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:bold; font-size:0.625em; line-height:1.8em; color:#777; text-transform:uppercase; }
+.thrive_cs_pagination_filler_text { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-size:0.75em; line-height:1.5em; color:#9f9f9f; font-style:italic; }
+.thrive_cs_pagination_number_text { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-size:0.875em; line-height:1.286em; color:#333; }
+.thrive_pagination a { float:left; }
+.thrive_pagination .thrive_pagination_prev_disabled, .thrive_pagination .thrive_pagination_next_disabled { cursor:default; float:left; }
+.thrive_pagination_full { width:98px; margin-left:112px; }
+.thrive_pagination_next { background: url( "images/pagination_controls.png" ) no-repeat -22px 0; height:20px; width:22px; }
+.thrive_pagination_prev { background: url( "images/pagination_controls.png" ) no-repeat -22px -20px; height:20px; width:22px; }
+a:hover .thrive_pagination_next { background: url( "images/pagination_controls.png" ) no-repeat 0 0; height:20px; width:22px; }
+a:hover .thrive_pagination_prev { background: url( "images/pagination_controls.png" ) no-repeat -44px -20px; height:20px; width:22px; }
+.thrive_pagination_prev_disabled { background: url( "images/pagination_controls.png" ) no-repeat 0 -20px; height:20px; width:22px; }
+.thrive_pagination_next_disabled { background: url( "images/pagination_controls.png" ) no-repeat -44px 0; height:20px; width:22px; }
+.thrive_pagination_next_disabled, .thrive_pagination_next { margin-left:10px; }
+.thrive_pagination_prev_disabled, .thrive_pagination_prev { margin-left:20px; }
+.thrive_pagination_permalink { background:url(images/pagination_controls.png) no-repeat 0 -40px; height:20px; width:16px; }
+.thrive_pagination_permalink:hover { background:url(images/pagination_controls.png) no-repeat -22px -40px; height:20px; width:16px; }
+.thrive_pagination_arrows { margin-left:8px; }
+.thrive_gallery_load { position:absolute; top:27px; left:76px; height:16px; width:16px; background:url(images/ajax-loader.gif) no-repeat center; }
+/* @end THRIVE CASE STUDY */
+
+/* @start THRIVE SERVICE */
+.thrive_gallery_viewport{ position:relative; height:212px; width:960px; overflow:hidden; }
+.thrive_gallery_slides { position:absolute; width:960px; height:212px; left:0; top:0; }
+.thrive_gallery_slide{ float:left; width:960px; height:212px; }
+.thrive_services_lgimg { position:relative; height:412px; }
+.thrive_subtitle_banner { position: absolute; left: -20px; padding-left: 20px; height: 75px; width: 594px; bottom: 51px; }
+.thrive_banner_green { background: url("images/green_hero_tape.png") no-repeat scroll 0pt 0pt transparent; }
+.thrive_banner_orange { background: url("images/orange_hero_tape.png") no-repeat scroll 0pt 0pt transparent; }
+.thrive_banner_yellow { background: url("images/yellow_hero_tape.png") no-repeat scroll 0pt 0pt transparent; }
+	/* @start SKIN */
+	.thrive_subtitle_banner .thrive_subtitle { padding-bottom:0; border-bottom:none; font-size:2.25em; line-height:74px; color:#fff; font-weight:bold; }
+	.thrive_service_content li, .thrive_service_content p { font-size:1.125em; line-height:1.667em; }
+	.thrive_column_block li, .thrive_column_block p, .thrive_column_block b { font-size:0.813em; line-height:1.846em; padding-top:0; }
+	.thrive_column_block b { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:bold; text-transform:uppercase; color:#777; }
+	.cufon-active .thrive_gallery_bx h4 { padding-top:26px; }
+	.thrive_gallery_bx p, .thrive_feature_bx p, .thrive_gallery_bx li, .thrive_feature_bx li { font-family:"trebuchet ms",arial,helvetica,sans-serif; }
+	/* @end SKIN */
+/* @end THRIVE SERVICE */
+
+/* @start HOMEPAGE SLIDER */
+.thrive_hpsldr_wrap { height: 399px; width: 960px; position: relative; overflow: hidden; }
+.thrive_hpsldr_left_btn, .thrive_hpsldr_right_btn { cursor:pointer; width:57px; height:399px; background:url(images/homepage_slider_arrows.png) no-repeat 0 171px; position:absolute; top:0px; z-index:100; }
+.thrive_hpsldr_left_btn { left:0; }
+.thrive_hpsldr_right_btn { background-position:-62px 171px; right:0;}
+.thrive_hpsldr_sld { width:960px; height:399px; } 
+.thrive_hpgal_box { background:url("images/hp_carousel_bg.png") no-repeat scroll 0 0 transparent; width:305px; padding:0 40px; height:399px; position:absolute; left:45px; top:0; z-index:10; }
+.thrive_hpgal_green { background:url("images/hp_carousel_bg_green.png") no-repeat scroll 0 0 transparent; }
+.thrive_hpgal_yellow { background:url("images/hp_carousel_bg_yellow.png") no-repeat scroll 0 0 transparent; }
+.thrive_hpgal_orange { background:url("images/hp_carousel_bg_orange.png") no-repeat scroll 0 0 transparent; }
+.thrive_hpgal_green .thrive_hpgal_md_break, .thrive_hpgal_green .thrive_hpgal_sm_break, .thrive_hpgal_yellow .thrive_hpgal_md_break, .thrive_hpgal_yellow .thrive_hpgal_sm_break, .thrive_hpgal_orange .thrive_hpgal_md_break, .thrive_hpgal_orange .thrive_hpgal_sm_break { background-color:#fff; }
+.thrive_hpgal_green .thrive_hpgal_title, .thrive_hpgal_green .thrive_hpgal_blurb, .thrive_hpgal_green .thrive_hpgal_more, .thrive_hpgal_green .thrive_hpgal_more a, .thrive_hpgal_yellow .thrive_hpgal_title, .thrive_hpgal_yellow .thrive_hpgal_blurb, .thrive_hpgal_yellow .thrive_hpgal_more, .thrive_hpgal_yellow .thrive_hpgal_more a, .thrive_hpgal_orange .thrive_hpgal_title, .thrive_hpgal_orange .thrive_hpgal_blurb, .thrive_hpgal_orange .thrive_hpgal_more, .thrive_hpgal_orange .thrive_hpgal_more a { color:#fff; }
+.thrive_hpsldr_sld { position:relative; }
+.thrive_hpgal_md_break { width:29px; height:5px; background-color:#009ddf; }
+.thrive_hpgal_sm_break { width:23px; height:2px; background-color:#009ddf; }
+.thrive_hpgal_title { font-size:2.313em; line-height:1.125em; color:#333; letter-spacing:-2px; }
+.thrive_hpgal_blurb { font-size:0.875em; line-height:1.492em; color:#666; }
+.thrive_hpgal_more { font-size:0.75em; line-height:1.574em; text-transform:uppercase; float:left; }
+.thrive_hpgal_box .thrive_arrow { width:17px; height:17px; background:url(images/homepage_link_arrows.png) no-repeat 0 0; float:left; margin-left:8px; }
+.thrive_hpgal_orange .thrive_arrow { width:17px; height:17px; background:url(images/homepage_link_arrows.png) no-repeat -22px 0; float:left; margin-left:8px; }
+.thrive_hpgal_green .thrive_arrow { width:17px; height:17px; background:url(images/homepage_link_arrows.png) no-repeat -44px 0; float:left; margin-left:8px; }
+.thrive_hpgal_yellow .thrive_arrow { width:17px; height:17px; background:url(images/homepage_link_arrows.png) no-repeat -66px 0; float:left; margin-left:8px; }
+.thrive_hpfea_title { text-transform:uppercase; font-size:1.125em; line-height:1.222em; color:#333; }
+.thrive_hpfea_blurb, .thrive_hpfea_more { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-size:0.75em; line-height:1.834em; color:#777; }
+.thrive_hpsldr_nav { height:9px; display:inline-block; margin-left:-50%; }
+*:first-child+html .thrive_hpsldr_nav { margin-left:0; } /* Yes an IE7 hack :( */
+.thrive_hpsldr_nav li { float:left; margin-right:8px; }
+.thrive_sldr_selector { background:url(images/gallery_pagination_controls.png) no-repeat -17px 0; width:10px; height:9px; cursor:pointer; }
+.thrive_sldr_selector_selected { background-position:0 0;}
+.thrive_center_block { float:left; margin-left:50%; }
+/* @end HOMEPAGE SLIDER */
+
+/* @start SKINS */
+/* @start THRIVE MENU SKIN */
+.thrive_primary_menu ul { height:29px; background:none; float:right; font:normal .857em "trebuchet ms", arial, helvetica, sans-serif; }
+.thrive_primary_menu .thrive_menu_selected a { color:#fff; }
+.thrive_primary_menu li a { background:none; line-height:29px; padding:0 10px; float:left; }
+.thrive_primary_menu li a:hover, .thrive_primary_menu ul li:hover a, .thrive_primary_menu ul .thrive_menu_selected a { background:#009ddf; float:left; padding:0 7px; line-height:29px; }
+.thrive_primary_menu li .thrive_sub_menu_bottom:hover, .thrive_primary_menu ul li:hover .thrive_sub_menu_bottom { background:#009ddf url(images/thrive_sprite.png) no-repeat -30px -113px; padding:0; line-height:3px; }
+.thrive_primary_menu .thrive_menu_item_border_left:hover { background:url(images/thrive_sprite.png) no-repeat 0 -114px; height:inherit; }
+.thrive_primary_menu li:hover .thrive_menu_item_border_right, .thrive_primary_menu .thrive_menu_selected .thrive_menu_item_border_right { display:block; background:url(images/thrive_sprite.png) no-repeat 0 -148px; width:3px; float:right; height:inherit; }
+.thrive_primary_menu li .thrive_sub_menu_top { background:#009ddf url(images/thrive_sprite.png) no-repeat -30px -104px; height:6px; width:105px; }
+.thrive_primary_menu li .thrive_sub_menu_bottom { background:#009ddf url(images/thrive_sprite.png) no-repeat -30px -113px; height:3px; }
+.thrive_primary_menu li .thrive_sub_menu { width:105px; background:#009ddf; }
+.thrive_primary_menu li li:hover, .thrive_primary_menu li li { float:left; width:105px; background:none; }
+.thrive_primary_menu li .thrive_sub_menu a { height:29px; width:85px; }
+.thrive_primary_menu li .thrive_sub_menu .thrive_sub_menu_bottom { height:3px; width:105px; padding:0; }
+.thrive_primary_menu li .thrive_sub_menu a:hover, .thrive_primary_menu li ul li:hover a { background-image:none; background-color:#1aa7e2; width:98px; padding-left:7px; padding-right:0; }
+.thrive_primary_menu li .thrive_sub_menu .thrive_sub_menu_bottom:hover, .thrive_primary_menu li ul li:hover .thrive_sub_menu_bottom { background:#009ddf url(images/thrive_sprite.png) no-repeat -30px -113px; height:3px; }
+.thrive_primary_menu .thrive_menu_item_border_right { display:none; }
+.thrive_primary_menu li .thrive_menu_hover, .thrive_menu_selected .thrive_multimenu_hover { display:none; background:url(images/thrive_sprite.png) no-repeat -16px -105px; height:5px; width:9px; margin:0 auto; _margin:0; }
+*:first-child+html .thrive_primary_menu li .thrive_menu_hover, *:first-child+html .thrive_primary_menu li .thrive_multimenu_hover { margin:0; } /* Yes an IE7 hack :( */
+.thrive_primary_menu li:hover .thrive_menu_hover, .thrive_primary_menu .thrive_menu_selected .thrive_menu_hover, .thrive_menu_selected .thrive_multimenu_hover { display:block; }
+.thrive_menu_selected:hover .thrive_multimenu_hover { display:none; }
+.thrive_primary_menu li { text-align:center; margin-right:6px; } /* This allows the hover pointer to be centered */
+.thrive_primary_menu .thrive_menu_corner_top_left { display:none; position:absolute; top:0; left:0; background:url(images/thrive_sprite.png) no-repeat 0 -105px; width:3px; height:3px; }
+.thrive_primary_menu .thrive_menu_corner_top_right { display:none; position:absolute; top:0; right:0; background:url(images/thrive_sprite.png) no-repeat -8px -105px; width:3px; height:3px; }
+.thrive_primary_menu .thrive_menu_corner_bottom_left { display:none; position:absolute; bottom:5px; left:0; background:url(images/thrive_sprite.png) no-repeat 0 -113px; width:3px; height:3px; }
+.thrive_primary_menu .thrive_menu_corner_bottom_right { display:none; position:absolute; bottom:5px; right:0; background:url(images/thrive_sprite.png) no-repeat -8px -113px; width:3px; height:3px; }
+.thrive_primary_menu li:hover .thrive_corners, .thrive_primary_menu .thrive_menu_selected .thrive_corners { display:block; }
+.thrive_corners { display:none; float:left; width:3px; background:#009ddf; position:relative; height:29px; }
+.thrive_corners_top_left { background:#009ddf url(images/thrive_sprite.png) no-repeat 0 -105px; height:3px; width:3px; float:left; }
+.thrive_corners_bottom_left { background:url(images/thrive_sprite.png) no-repeat 0 -113px; width:3px; height:3px; position:absolute; bottom:0; left:0; }
+.thrive_corners_top_right { background:url(images/thrive_sprite.png) no-repeat -8px -105px; height:3px; width:3px; float:left; }
+.thrive_corners_bottom_right { background:url(images/thrive_sprite.png) no-repeat -8px -113px; width:3px; height:3px; position:absolute; bottom:0; left:0; }
+.thrive_menu_zfix { position:relative; z-index:201; } /* Fixes the menu positioning of sub-menus in IE7. The content layer was stacking higher the the header layer. */
+.thrive_menu_selected:hover .thrive_corners_multimenu_bottom_right, .thrive_menu_selected:hover .thrive_corners_multimenu_bottom_left, .thrive_corners_multimenu_bottom_right, .thrive_corners_multimenu_bottom_left { background:none; }
+.thrive_menu_selected .thrive_corners_multimenu_bottom_right { background:url(images/thrive_sprite.png) no-repeat -8px -113px; width:3px; height:3px; position:absolute; bottom:0; left:0; }
+.thrive_menu_selected .thrive_corners_multimenu_bottom_left { background:url(images/thrive_sprite.png) no-repeat 0 -113px; width:3px; height:3px; position:absolute; bottom:0; left:0; }
+/* @end THRIVE MENU SKIN */
+
+/* @start THRIVE CASE STUDY SKIN */
+.thrive_cs_swapbx, .thrive_cs_swapbx_hover  { height:182px; }
+.thrive_cs_swapbx_hover { background-color:#fff; }
+.thrive_cs_swapbx  p { font-size:1.125em; line-height:1.2em; font-weight:bold; }
+.thrive_cs_swapbx .thrive_cs_service { font-size:0.75em; line-height:1.2em; text-transform:uppercase; font-weight:normal; padding-top:7px; padding-bottom:1px; }
+.thrive_cs_swapbx .thrive_cs_link { font-size:0.688em; line-height:1.2em; font-weight:bold; text-transform:lowercase; }
+/* @end THRIVE CASE STUDY SKIN */
+/* @end SKINS */
+
+/* @start THRIVE CONTACT */
+.cufon-active .page-template-templatev-php  h4 { padding-top:17px; }
+.thrive_contact_label_text { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:bold; font-size:0.875em; line-height:2.572em; color:#333; }
+.thrive_contact_email_alt_title { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:bold; font-size:0.875em; line-height:1em; color:#333; }
+.thrive_contact_email_alt_text { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:normal; font-size:0.75em; line-height:1.5em; color:#777; }
+.thrive_contact_email_alt_text a { color:#777; }
+.thrive_contact_info_title { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:bold; font-size:0.875em; line-height:1.714em; color:#333; }
+.thrive_contact_info_text { font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:normal; font-size:0.75em; line-height:1.5em; color:#777; }
+.thrive_contact_submit { margin-right:20px; }
+.thrive_contact_submit_text input { border:none; font-family:"trebuchet ms", arial, helvetica, sans-serif; font-weight:bold; font-size:0.875em; line-height:2.572em; color:#fff; background-color:#009ddf; width:80px; height:32px; }
+.thrive_contact_pipe { color:#c8c8c8; }
+input.thrive_text_input { color:#666; background-color:#f8fbf9; margin:auto 0; padding:0 13px; font-family:"trebuchet ms", arial, helvetica, sans-serif; font-size:0.687em; line-height:2.572em; border:1px solid #e7e7e7; height:28px; width:309px; }
+textarea.thrive_text_input { color:#666; background-color:#f8fbf9; padding:20px; font-family:"trebuchet ms", arial, helvetica, sans-serif; font-size:0.687em; line-height:2.572em; margin:0; border:1px solid #e7e7e7; height:175px; width:295px; max-width:295px; }
+input.thrive_text_input_focus, textarea.thrive_text_input_focus { background-color:#fff; border:1px solid #e7e7e7; outline:medium none; }
+input:submit { background-color:#009DDF; }
+.thrive_contact_submit { float:left; }
+.thrive_error_label { width:14px; height:14px; background:url( images/thrive_error_icons.png ) no-repeat -40px -3px; display:inline-block; vertical-align:middle; }
+.thrive_tooltip { background-color:#FEFCED; border:1px solid #D8D8D8; color:#CD642A; display:none; font-size:0.625em; margin:5px; padding:8px 10px; position:absolute; text-align:center; width:auto; font-weight:bold; font-family:"trebuchet ms", arial, helvetica, sans-serif; }
+.map_canvas { width:583px; height:468px; border:1px solid #e7e7e7; margin-top:27px; }
+.thrive_success_message { height:55px; font-family:"trebuchet ms", arial, helvetica, sans-serif; font-size:0.875em; line-height:2.572em; color:#cd642a; background-color:#ffe; text-align:center; font-weight:bold; line-height:55px; }
+.thrive_map_icon { float:left; margin-right:5px; }
+.thrive_error_message { background-color:#ffe; font-family:"trebuchet ms",arial,helvetica,sans-serif; line-height:55px; height:55px; text-align:center; }
+.thrive_error_text{ font-size:0.75em; font-weight:bold; color:#cd642a; padding-left:9px; }
+.thrive_error_logo { background:url( images/thrive_error_icons.png ) no-repeat -11px 2px; padding:0 6px; }
+/* @end THRIVE CONTACT */
